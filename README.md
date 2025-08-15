@@ -1,23 +1,110 @@
-# ✈️ Airline Database – SQL Project
+✈️ SQL Capstone Project – Airline DB
+📌 Overview
 
-## 📌 Overview
-This project contains SQL queries written for an **Airline Management Database**. The queries cover complex use-cases like passenger management, flight tracking, bookings, and revenue analysis.
+This project is a SQL-based capstone focusing on querying an airline database to answer a variety of business questions. It covers real-world SQL skills such as:
 
-## 📂 Files
-- `queries/airline_queries.docx`: Contains all SQL queries written and explained
-- (Optional) `queries/airline_queries.sql`: Raw SQL script version of the above
-- `ERD.png`: Entity-Relationship Diagram of the database (if available)
+Data formatting
 
-## 🧠 Topics Covered
-- Joins (INNER, LEFT, FULL)
-- Window functions
-- Subqueries and CTEs
-- Aggregation and Grouping
-- Views & Index suggestions
+Table joins
 
-## 🔧 Tools Used
-- SQL Server / MySQL / PostgreSQL (Mention the one you used)
-- MS Word (for query documentation)
+Window functions (RANK, ROW_NUMBER)
 
-## 👨‍💻 Author
-Shivam Gaur
+Aggregations (SUM, COUNT, MIN, MAX)
+
+Filtering and grouping
+
+Date & time functions
+
+The dataset and practice environment are available in Skillovilla’s Airline DB Playground:
+Airline DB Playground
+
+📂 Project Structure
+
+The project contains 30 SQL problems ranging from basic to advanced difficulty.
+Each problem includes:
+
+Question – Business requirement
+
+Expected Output – Column names and output format
+
+SQL Query – Solution
+
+🛠 Skills Demonstrated
+
+SELECT Queries – Retrieving specific columns and formatting output
+
+JOINs – Combining data from multiple tables (JOIN, INNER JOIN)
+
+Aggregations – COUNT(), SUM(), MIN(), MAX()
+
+Grouping & Filtering – GROUP BY, HAVING
+
+Date & Time Functions – TO_CHAR(), EXTRACT()
+
+Window Functions – RANK(), ROW_NUMBER() for ranking and ordering results
+
+Conditional Filtering – WHERE, IN, BETWEEN, LIKE
+
+Business Case Queries – Highest paying passengers, cancelled flights refunds, longest flights, etc.
+
+📋 Example Problem
+
+Question:
+Represent the book_date column in yyyy-mmm-dd format using the Bookings table.
+
+Expected Output:
+
+book_ref | book_date   | total_amount
+
+
+Solution:
+
+SELECT 
+    book_ref, 
+    TO_CHAR(book_date, 'yyyy-mmm-dd') AS book_date, 
+    total_amount
+FROM bookings;
+
+🗂 Topics Covered in Queries
+
+Data formatting with TO_CHAR()
+
+Joining passenger, flight, and booking tables
+
+Finding least/most frequent seat allocations
+
+Monthly highest/lowest paying passengers
+
+Identifying nonstop vs. multi-flight journeys
+
+Flights without boarding passes
+
+Longest flight durations
+
+Morning flights & earliest departures per airport
+
+Airports with most/least departures
+
+Cancelled and delayed flights by aircraft type
+
+Passenger refunds due to cancellations
+
+Range-based aircraft filtering
+
+Seat counts per fare category
+
+First/last flights per airport & date
+
+Flight counts for specific routes and airports
+
+🚀 How to Use
+
+Visit the Skillovilla Airline DB Playground.
+
+Run each query to verify the results match the Expected Output.
+
+Modify queries to explore other data insights.
+
+📜 License
+
+This project is for educational purposes. Queries and logic are free to use and adapt.
